@@ -50,21 +50,82 @@
 
   <!-- Page Content -->
   <div class="container">
+
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
-        <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
-        <ul class="list-unstyled">
-          <li>Bootstrap 4.2.1</li>
-          <li>jQuery 3.3.1</li>
-        </ul>
+        <h1 class="mt-5">Crea la tua ricetta</h1>
+        <p class="lead">Completa tutte le informazioni e pubblica subito la tua ricetta.</p>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col">
+          <form id='recepie' onsubmit='return saveRecepie(event);'>
+
+              <div class="form-group">
+                <label for="name">Nome Ricetta</label>
+                <input type="text" class="form-control" id="name" placeholder="Nome Ricetta">
+              </div>
+
+              <div class="form-group">
+                <label for="name">Numero di Persone</label>
+                <input type="text" class="form-control" id="people" placeholder="Numero di Persone">
+              </div>
+
+              <div class="form-group">
+                <label for="name">Tempo di preparazione</label>
+                <input type="text" class="form-control" id="preparationTime" placeholder="Tempo di preparazione">
+              </div>
+
+              <div class="form-group">
+                <label for="name">Tempo di cottura</label>
+                <input type="text" class="form-control" id="cookingTime" placeholder="Tempo di cottura">
+              </div>
+
+
+              <div class="form-group">
+                <label for="name">Difficoltà</label>
+                <input type="text" class="form-control" id="difficulty" placeholder="Difficoltà">
+              </div>
+
+              <div class="form-group">
+                <label for="name">Costo Stimato</label>
+                <input type="text" class="form-control" id="cost" placeholder="Costo stimato">
+              </div>
+
+              <div class="form-group">
+                <label for="name">Procedimento</label>
+                <textarea class="form-control" id="description" placeholder="Scrivi qua il tuo svolgimento..."></textarea>
+              </div>
+
+              <button class="btn btn-primary" >Submit</button>
+          </form>
+      </div>
+    </div>
+
   </div>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAXZFH_U-bzQZZl-E_KQ3-KHM9P_WSEul4",
+      authDomain: "recepies-583eb.firebaseapp.com",
+      databaseURL: "https://recepies-583eb.firebaseio.com",
+      projectId: "recepies-583eb",
+      storageBucket: "recepies-583eb.appspot.com",
+      messagingSenderId: "525811569138"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <script src='js/models/recepie.js' ></script>
+  <script src='js/controllers/create.js' ></script>
 
 </body>
 
