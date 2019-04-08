@@ -7,3 +7,7 @@
 .logo-style{
   font-family: 'Dosis', sans-serif;
 }
+
+body {
+  padding-top: 56px;
+}
