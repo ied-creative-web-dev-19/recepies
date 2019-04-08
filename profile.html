@@ -3,6 +3,8 @@
 
 <head>
 
+  <!-- PROFILE Bootstrap Layout from https://bootsnipp.com/snippets/4Mm5R -->
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -37,20 +39,17 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="create.html">
-              <i class="fas fa-utensil-spoon"></i>
-              Crea Ricetta
+              <i class="fas fa-utensil-spoon"></i> Crea Ricetta
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="search.html">
-              <i class="fas fa-search"></i>
-              Cerca
+              <i class="fas fa-search"></i> Cerca
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="profile.html">
-              <i class="fas fa-user"></i>
-              Il mio profilo
+              <i class="fas fa-user"></i> Il mio profilo
             </a>
           </li>
         </ul>
@@ -59,22 +58,146 @@
   </nav>
 
   <!-- Page Content -->
+
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 text-center">
-        <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
-        <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
-        <ul class="list-unstyled">
-          <li>Bootstrap 4.2.1</li>
-          <li>jQuery 3.3.1</li>
-        </ul>
+      <div class="col">
+        <hr>
       </div>
     </div>
   </div>
 
+  <div class="container bootstrap snippet mb-5">
+    <div class="row">
+      <div class="col">
+        <h1>User name</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <!--left col-->
+
+        <div class="text-center mb-2">
+          <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+          <div id='image-loader' style="display: none;">
+            <h6>Upload a different photo...</h6>
+            <input type="file" class="text-center center-block file-upload">
+          </div>
+        </div>
+
+        <div class="card card-default mb-2">
+          <div class="card-header">Website <i class="fa fa-link fa-1x"></i></div>
+          <div class="card-body"><a href="http://bootnipets.com">bootnipets.com</a></div>
+        </div>
+
+        <div class="card card-default mb-2">
+          <div class="card-header">Activity</div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-right"><span class="pull-left"><strong>Shares</strong></span> 125</li>
+              <li class="list-group-item text-right"><span class="pull-left"><strong>Likes</strong></span> 13</li>
+              <li class="list-group-item text-right"><span class="pull-left"><strong>Posts</strong></span> 37</li>
+              <li class="list-group-item text-right"><span class="pull-left"><strong>Followers</strong></span> 78</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card card-default">
+          <div class="card-header">Social Media</div>
+          <div class="card-body">
+            <i class="fab fa-facebook"></i> <i class="fab fa-github"></i> <i class="fab fa-twitter"></i> <i class="fab fa-pinterest"></i> <i class="fab fa-google-plus"></i>
+          </div>
+        </div>
+
+      </div>
+      <!--/col-3-->
+      <div class="col-sm-9">
+
+        <ul class="nav nav-tabs">
+          <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#profile">Home</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#recepies">Menu 1</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#reviews">Menu 2</a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane active" id="profile">
+            <hr>
+            <form class="form" action="##" method="post" id="registrationForm">
+              <div class="form-group">
+
+                <div class="col-xs-6">
+                  <label for="first_name"><h4>Name</h4></label>
+                  <input type="text" class="form-control" name="name" id="first_name" placeholder="first name" title="enter your first name if any.">
+                </div>
+              </div>
+              <div class="form-group">
+
+                <div class="col-xs-6">
+                  <label for="email"><h4>Email</h4></label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+                </div>
+              </div>
+              <div class="form-group">
+
+                <div class="col-xs-6">
+                  <label for="email"><h4>Location</h4></label>
+                  <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
+                </div>
+              </div>
+              <div class="form-group">
+
+                <div class="col-xs-6">
+                  <label for="password"><h4>Password</h4></label>
+                  <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
+                  <br />
+                  <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <br>
+                  <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                  <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                </div>
+              </div>
+            </form>
+
+            <hr>
+
+          </div>
+          <!--/tab-pane-->
+
+          <div class="tab-pane" id="recepies">
+            <p>Recepies</p>
+          </div>
+
+          <!--/tab-pane-->
+          <div class="tab-pane" id="reviews">
+            <p>Reviews</p>
+          </div>
+          <!--/tab-pane-->
+
+        </div>
+        <!--/tab-content-->
+
+      </div>
+      <!--/col-9-->
+    </div>
+    <!--/row-->
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/controllers/profile.js"></script>
 
 </body>
 
