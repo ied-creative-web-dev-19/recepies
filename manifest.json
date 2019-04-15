@@ -1,0 +1,16 @@
+{
+    "dir": "ltr",
+    "lang": "it",
+    "name": "Recepies",
+    "scope": "/",
+    "display": "browser",
+    "start_url": "https://recepies-583eb.firebaseapp.com/",
+    "short_name": "Recepies",
+    "theme_color": "transparent",
+    "description": "Recepies, l'app per scrivere e condividere le tue ricette.",
+    "orientation": "any",
+    "background_color": "transparent",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": []
+}

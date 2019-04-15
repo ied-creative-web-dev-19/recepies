@@ -15,12 +15,10 @@ var db = firebase.firestore();
 function loadRecepies(){
 
   db.collection('recepies').onSnapshot(function(snapshot){
-    console.log( "Datas Snapshot:", snapshot );
 
     clearContainer();
   
     snapshot.forEach( item => {
-      console.log("Element data: ", item.data());
       var recepieElementFromDb = item.data();
       var recepieIdFromDb = item.id;
       addRecepie(recepieElementFromDb,recepieIdFromDb);
