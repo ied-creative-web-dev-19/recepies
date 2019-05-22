@@ -31,3 +31,11 @@ function saveRecepie(event){
 
     return false;
 }
+
+function uploadFileOnClick(){
+
+}
+
+$('#upload-button').change(function(){
+    uploadFile(this);
+});

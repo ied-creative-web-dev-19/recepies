@@ -113,7 +113,7 @@
                 <label for="name">Immagine</label>
                 <div class="input-group mb-3">   
                   <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="inputGroupFile02">
+                    <input type="file" class="custom-file-input" id="upload-button">
                     <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
                   </div>
                   <div class="input-group-append">
@@ -134,10 +134,11 @@
 
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-storage.js"></script>
   <script src="js/firebase.js"></script>
   <script src='js/models/recepie.js'></script>
   <script src='js/controllers/create.js'></script>
-  <script src='js/controllers/storage.js'></script>
+  <script src='js/services/storage.js'></script>
 
 </body>
 
