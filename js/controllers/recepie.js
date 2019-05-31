@@ -63,7 +63,6 @@ function addRecipie(recepie, recepieId){
     var numVotes = recepie.numVotes;
     var ingredients = recepie.ingredients;
 
-    console.log(title);
     $('#recepieName').text(title);
     $('#recepieCost').text(cost + " €");
     $('#recepieDesc').text(description);
@@ -73,7 +72,16 @@ function addRecipie(recepie, recepieId){
     $('#recepieCookTime').text("Cooking time is: " + cookingTime + " minutes");
     $('#recepieVotes').text(numVotes);
     $('#recepieIngredients').text(ingredients);
-    $('#recepiePeople').text(people)
+    $('#recepiePeople').text(people);
+
+    var image = null;
+    if(recepie.images != undefined && Array.isArray(recepie.images) && recepie.images.length > 0 ){
+      image = recepie.images[0];
+    }
+    if( image !== null ){
+        var $img = $('<img style="width: 100%;" />').addClass('img-fluid').attr('src',image);
+        $('.recepie-image-container').append($img);
+    }
 }
 
 
