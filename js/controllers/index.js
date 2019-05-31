@@ -62,6 +62,14 @@ function addRecepie(recepieItem, recepieId){
   var rating = parseInt(recepieItem.rating);
   $newElement.find('.card-footer .text-muted').append(rating);
 
+  var image = null;
+  if(recepieItem.images != undefined && Array.isArray(recepieItem.images) && recepieItem.images.length > 0 ){
+    image = recepieItem.images[0];
+  }
+  if( image !== null ){
+    $newElement.find('.card-img-top').attr('src',image);
+  }
+
   $('#recepies-list-container').append($newElement);
 }
 
