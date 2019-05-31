@@ -12,7 +12,7 @@
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  
+
   <!-- Custom CSS for this page -->
   <link href="css/create.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
@@ -39,26 +39,22 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="create.html">
-              <i class="fas fa-utensil-spoon"></i>
-              Crea Ricetta
+              <i class="fas fa-utensil-spoon"></i> Crea Ricetta
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="search.html">
-              <i class="fas fa-search"></i>
-              Cerca
+              <i class="fas fa-search"></i> Cerca
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="profile.html">
-              <i class="fas fa-user"></i>
-              Il mio profilo
+              <i class="fas fa-user"></i> Il mio profilo
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="signup.html">
-              <i class="fas fa-plus"></i>
-              Signup
+              <i class="fas fa-plus"></i> Signup
             </a>
           </li>
         </ul>
@@ -78,57 +74,58 @@
 
     <div class="row">
       <div class="col">
-          <form id='recepie' onsubmit='return saveRecepie(event);'>
+        <form id='recepie' onsubmit='return saveRecepie(event);'>
 
-              <div class="form-group">
-                <label for="name">Nome Ricetta</label>
-                <input type="text" class="form-control" id="name" placeholder="Nome Ricetta">
-              </div>
+          <div class="form-group">
+            <label for="name">Nome Ricetta</label>
+            <input type="text" class="form-control" id="name" placeholder="Nome Ricetta">
+          </div>
 
-              <div class="form-group">
-                <label for="name">Numero di Persone</label>
-                <input type="text" class="form-control" id="people" placeholder="Numero di Persone">
-              </div>
+          <div class="form-group">
+            <label for="name">Numero di Persone</label>
+            <input type="text" class="form-control" id="people" placeholder="Numero di Persone">
+          </div>
 
-              <div class="form-group">
-                <label for="name">Tempo di preparazione</label>
-                <input type="text" class="form-control" id="preparationTime" placeholder="Tempo di preparazione">
-              </div>
+          <div class="form-group">
+            <label for="name">Tempo di preparazione</label>
+            <input type="text" class="form-control" id="preparationTime" placeholder="Tempo di preparazione">
+          </div>
 
-              <div class="form-group">
-                <label for="name">Tempo di cottura</label>
-                <input type="text" class="form-control" id="cookingTime" placeholder="Tempo di cottura">
-              </div>
+          <div class="form-group">
+            <label for="name">Tempo di cottura</label>
+            <input type="text" class="form-control" id="cookingTime" placeholder="Tempo di cottura">
+          </div>
 
-              <div class="form-group">
-                <label for="name">Difficoltà</label>
-                <input type="text" class="form-control" id="difficulty" placeholder="Difficoltà">
-              </div>
+          <div class="form-group">
+            <label for="name">Difficoltà</label>
+            <input type="text" class="form-control" id="difficulty" placeholder="Difficoltà">
+          </div>
 
-              <div class="form-group">
-                <label for="name">Costo Stimato</label>
-                <input type="text" class="form-control" id="cost" placeholder="Costo stimato">
-              </div>
+          <div class="form-group">
+            <label for="name">Costo Stimato</label>
+            <input type="text" class="form-control" id="cost" placeholder="Costo stimato">
+          </div>
 
-              <div class="form-group">
-                <label for="name">Procedimento</label>
-                <textarea class="form-control" id="description" placeholder="Scrivi qua il tuo svolgimento..."></textarea>
+          <div class="form-group">
+            <label for="name">Procedimento</label>
+            <textarea class="form-control" id="description" placeholder="Scrivi qua il tuo svolgimento..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="name">Immagine</label>
+            <div class="input-group mb-3">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="upload-button">
+                <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
               </div>
-              
-              <div class="form-group">
-                <label for="name">Immagine</label>
-                <div class="input-group mb-3">   
-                  <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="upload-button">
-                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
-                  </div>
-                  <div class="input-group-append">
-                    <span class="btn btn-primary" id="inputGroupFileAddon02">Upload</span>
-                  </div>
-                </div>
+              <div class="input-group-append">
+                <span class="btn btn-primary" id="inputGroupFileAddon02">Upload</span>
+              </div>
             </div>
-              <button class="btn btn-primary" >Submit</button>
-          </form>
+          </div>
+
+          <button class="btn btn-primary">Submit</button>
+        </form>
       </div>
     </div>
 
