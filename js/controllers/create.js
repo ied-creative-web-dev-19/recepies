@@ -32,9 +32,13 @@ function saveRecepie(event){
     return false;
 }
 
-function uploadFileOnClick(){
 
-}
+$(document).ready(function(){
+    $('#image-input').on('change',function(){
+        var selectedFile = $('#image-input').prop('files')[0];
+        uploadRecepieImage(selectedFile);
+    });
+});
 
 $('#upload-button').change(function(){
     uploadFile(this);

@@ -1,9 +1,33 @@
-function uploadFile(file){
+function uploadFile(destinationRef, file){
 
-    var storageRef = firebase.storage().ref();
-    var recepiesRef = storageRef.child('recepies');
+    var storage = firebase.storage();
 
-    recepiesRef.put(file).then(function(snapshot) {
-        console.log('Uploaded a blob or file!');
+    var storageRef = storage.ref();
+
+    var recepiesRef = storageRef.child(destinationRef);
+
+    recepiesRef.put(file)
+    .then( function(snapshot) {
+        // dai risposta positva
+        console.log('Snapshot',snapshot);
+    } ).catch(function(error){
+        // lancia l'errore a video
+        console.log('Error',error);
     });
+}
+
+function uploadRecepieImage(file){
+    
+    if( file == undefined ){
+        return 'Error';
+    }
+
+    var ext = file.name.split('.').pop();
+
+    const recepiePath = 'recepies/';
+    var timestamp = Date.now();
+    var filePath = recepiePath+timestamp+'.'+ext;
+
+    uploadFile(filePath,file);
+
 }
