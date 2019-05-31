@@ -6,18 +6,19 @@ function uploadFile(destinationRef, file){
 
     var recepiesRef = storageRef.child(destinationRef);
 
-    recepiesRef.put(file)
+    return recepiesRef.put(file)
     .then( function(snapshot) {
         // dai risposta positva
-        console.log('Snapshot',snapshot);
+        return snapshot.ref.getDownloadURL().then(function(downloadURL) {
+            return downloadURL;
+        });
     } ).catch(function(error){
         // lancia l'errore a video
-        console.log('Error',error);
+        throw error;
     });
 }
 
 function uploadRecepieImage(file){
-    
     if( file == undefined ){
         return 'Error';
     }
@@ -28,6 +29,5 @@ function uploadRecepieImage(file){
     var timestamp = Date.now();
     var filePath = recepiePath+timestamp+'.'+ext;
 
-    uploadFile(filePath,file);
-
+    return uploadFile(filePath,file);
 }

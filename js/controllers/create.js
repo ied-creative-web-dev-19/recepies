@@ -2,6 +2,8 @@
 
 var db = firebase.firestore();
 
+var uploadedImages = [];
+
 function saveRecepie(event){
     event.preventDefault();
     
@@ -15,6 +17,7 @@ function saveRecepie(event){
     currentRecepie.difficulty = $('#difficulty').val();
     currentRecepie.cost = $('#cost').val();
     currentRecepie.description = $('#description').val();
+    currentRecepie.images = uploadedImages;
 
     console.log(currentRecepie);
 
@@ -36,10 +39,20 @@ function saveRecepie(event){
 $(document).ready(function(){
     $('#image-input').on('change',function(){
         var selectedFile = $('#image-input').prop('files')[0];
-        uploadRecepieImage(selectedFile);
+        uploadRecepieImage(selectedFile).then(downloadUrl => {
+            console.log(downloadUrl);
+            uploadedImages.push(downloadUrl);
+            syncImagesInView();
+        });
     });
 });
 
-$('#upload-button').change(function(){
-    uploadFile(this);
-});
+function syncImagesInView(){
+    var $container = $('#uploaded-images');
+    $container.empty();
+    for(var index in uploadedImages){
+        var imageUrl = uploadedImages[index];
+        var $img = $('<img />').attr('src',imageUrl).addClass('uploaded-image');
+        $container.append($img);
+    }
+}
