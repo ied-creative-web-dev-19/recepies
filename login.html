@@ -76,7 +76,7 @@
                   <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="" autofocus="">
                   <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
                   
-                  <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Accedi </button>
+                  <button class="btn btn-success btn-block" type="submit" id='button-signin'><i class="fas fa-sign-in-alt"></i> Accedi </button>
                   <a href="#" id="forgot_pswd">Recupero Password</a>
                   <hr>
                   <!-- <p>Don't have an account!</p>  -->
@@ -125,7 +125,14 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script src= "js/firebase.js"></script>
+
+  <script src="js/services/authentication.js"></script>
   <script src="js/controllers/login.js"></script>
+  <script src="pwa-sw-register.js"></script>
 
 </body>
 
