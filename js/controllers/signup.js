@@ -23,11 +23,15 @@ function doSignup(e){
   // se OK, portare alla home o a pagina dedicata
 }
 
+
+
 $(document).ready(function(){
 
   $('#signup-button').click(function(e){
     doSignup(e);
   });
+
+  isInSignupView = true;
 
 });
 

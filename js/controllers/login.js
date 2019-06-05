@@ -28,6 +28,7 @@ function doLogin(e){
   login(email, pass);
 }
 
+
 $(() => {
   // Login Register Form
   $('#logreg-forms #forgot_pswd').click(toggleResetPswd);
@@ -39,4 +40,6 @@ $(() => {
   $('#button-signin').click(function(e){
     doLogin(e);
   });
+
+  isInLoginView = true;
 });

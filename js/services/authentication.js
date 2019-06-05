@@ -28,6 +28,8 @@ function logout(){
 
 var appUser = null;
 
+var isInLoginView, isInSignupView;
+
 function listenAuth(){
   auth.onAuthStateChanged(function(user) {
     if (user) {
@@ -41,6 +43,11 @@ function listenAuth(){
       var uid = user.uid;
       var providerData = user.providerData;
       console.log("LOG IN",user);
+
+      if( ( isInLoginView === true || isInSignupView === true ) ){
+        location.href = 'index.html';
+      }
+
       // ...
     } else {
       appUser = null;
