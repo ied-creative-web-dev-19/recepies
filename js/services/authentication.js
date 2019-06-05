@@ -22,6 +22,10 @@ function login(email, password){
   });  
 }
 
+function logout(){
+  auth.signOut();
+}
+
 var appUser = null;
 
 function listenAuth(){
