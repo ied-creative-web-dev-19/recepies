@@ -9,5 +9,5 @@ git remote add origin https://github.com/ied-creative-web-dev-19/recepies
 git push -u origin master
 ```
 # Dati utili
-Hosting [Firebase] (https://recepies-583eb.firebaseapp.com/).
-Repositories [Github] (https://github.com/ied-creative-web-dev-19/recepies#recepies)
+- Hosting [Firebase] (https://recepies-583eb.firebaseapp.com/)
+- Repositories [Github] (https://github.com/ied-creative-web-dev-19/recepies#recepies)
