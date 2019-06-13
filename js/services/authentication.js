@@ -24,11 +24,30 @@ function login(email, password){
 
 function logout(){
   auth.signOut();
+  location.reload();
+
 }
 
 var appUser = null;
 
 var isInLoginView, isInSignupView;
+
+//Hide unuseful button in navbar when logged / not logged
+firebase.auth().onAuthStateChanged(firebaseUser => {
+  if(firebaseUser) {
+    console.log(firebaseUSer);
+    $("#Login").hide();
+    $("#Signup").hide();
+
+  } else{
+    $("#IlMioProfilo").hide();
+    $("#Logout").hide();
+    $("#CreaRicetta").hide();
+
+    console.log('not logged in')
+  }
+})
+
 
 function listenAuth(){
   auth.onAuthStateChanged(function(user) {
@@ -42,6 +61,8 @@ function listenAuth(){
       var isAnonymous = user.isAnonymous;
       var uid = user.uid;
       var providerData = user.providerData;
+      $("#Login").hide();
+      $("#Signup").hide();
       console.log("LOG IN",user);
 
       if( ( isInLoginView === true || isInSignupView === true ) ){
@@ -53,6 +74,10 @@ function listenAuth(){
       appUser = null;
       // User is signed out.
       // ...
+      $("#IlMioProfilo").hide();
+      $("#Logout").hide();
+      $("#CreaRicetta").hide();
+      $("#Recepie-Card").hide();
       console.log("LOG OUT",user);
     }
   });

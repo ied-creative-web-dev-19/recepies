@@ -32,30 +32,45 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home
+          <li class="nav-item ">
+            <a class="nav-link" href="index.html" id="Home">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="create.html">
-              <i class="fas fa-utensil-spoon"></i> Crea Ricetta
+            <a class="nav-link" href="create.html" id="CreaRicetta">
+              <i class="fas fa-utensil-spoon"></i>
+              Crea Ricetta
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="search.html">
-              <i class="fas fa-search"></i> Cerca
+            <a class="nav-link" href="search.html" id="Cerca">
+              <i class="fas fa-search"></i>
+              Cerca
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="profile.html" id="IlMioProfilo">
+              <i class="fas fa-user"></i>
+              Il mio profilo
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="profile.html">
-              <i class="fas fa-user"></i> Il mio profilo
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="signup.html">
+            <a class="nav-link" href="signup.html" id="Signup">
               <i class="fas fa-plus"></i>
               Signup
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html" id="Login">
+              <i class="fas fa-sign-in-alt"></i>
+              Login
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript: void(0);" onclick='logout();' id="Logout">
+              <i class="fas fa-sign-out-alt"></i>
+              Logout
             </a>
           </li>
         </ul>
@@ -201,9 +216,13 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script src="js/firebase.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="js/controllers/profile.js"></script>
+  <script src="js/services/authentication.js"></script>
+
 
 </body>
 
