@@ -32,21 +32,7 @@ var appUser = null;
 
 var isInLoginView, isInSignupView;
 
-//Hide unuseful button in navbar when logged / not logged
-firebase.auth().onAuthStateChanged(firebaseUser => {
-  if(firebaseUser) {
-    console.log(firebaseUSer);
-    $("#Login").hide();
-    $("#Signup").hide();
 
-  } else{
-    $("#IlMioProfilo").hide();
-    $("#Logout").hide();
-    $("#CreaRicetta").hide();
-
-    console.log('not logged in')
-  }
-})
 
 
 function listenAuth(){
