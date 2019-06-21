@@ -63,7 +63,6 @@ function listenAuth(){
       $("#IlMioProfilo").hide();
       $("#Logout").hide();
       $("#CreaRicetta").hide();
-      $("#Recepie-Card").hide();
       console.log("LOG OUT",user);
     }
   });
