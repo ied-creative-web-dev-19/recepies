@@ -71,7 +71,8 @@ function addRecipie(recepie, recepieId){
     $('#recepiePrepTime').text("Preparation time is: " + preparationTime + " minutes");
     $('#recepieCookTime').text("Cooking time is: " + cookingTime + " minutes");
     $('#recepieVotes').text(numVotes);
-    $('#recepieIngredients').text(ingredients);
+    var ingridientString = ingredients && Array.isArray(ingredients) ? ingredients.join(', ') : '/';
+    $('#recepieIngredients').text(ingridientString);
     $('#recepiePeople').text(people);
 
     var image = null;
